@@ -1,6 +1,6 @@
 var textObj=[];
 var n=20;
-var max=80;
+var max_=80;
 function setup() { 
   createCanvas(windowWidth,windowHeight);
 	textAlign(CENTER);
@@ -10,7 +10,7 @@ function setup() {
 	colorMode(HSB,360,100,100);
 	var origin="SOGANG UNIVERSITY ART & TECHNOLOGY CREATION BEYOND IMAGINATION";
 	var originArr=split(origin,' ');
-	for(var i=0;i<max;i++)
+	for(var i=0;i<max_;i++)
 	{
 		var init=originArr[int(random(originArr.length))];
 		textObj.push(new textobject(init));
@@ -19,7 +19,7 @@ function setup() {
 
 function draw() { 
 	var i;
-	n=min(map(mouseY,0,height,0,max),max);
+	n=min(map(mouseY,0,height,0,max_),max_);
 	background(frameCount%360,60,70);
 	for(i=0;i<n;i++)
 	{
@@ -27,7 +27,7 @@ function draw() {
 	}
 	if(mouseIsPressed)
 	{
-		for(i=0;i<max;i++)
+		for(i=0;i<max_;i++)
 		{
 			textObj[i].rotate();
 		}
