@@ -19,7 +19,7 @@ function setup() {
 
 function draw() { 
 	var i;
-	n=min(map(mouseY,0,height,0,40),40);
+	n=min(map(mouseY,0,height,0,max),max);
 	background(frameCount%360,60,70);
 	for(i=0;i<n;i++)
 	{
